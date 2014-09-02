@@ -1,6 +1,7 @@
 {
   "name": "poxy-wordpress-core",
   "version": "0.0.3",
+  "main": "poxy-core-master.php",
   "homepage": "https://github.com/paulwooddesign/poxy-wordpress-core",
   "authors": [
     "Paul Wood <paul@poxy.io>"
