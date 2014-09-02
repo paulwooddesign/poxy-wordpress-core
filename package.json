@@ -1,0 +1,14 @@
+{
+  "name": "poxy-wordpress-core",
+  "version": "0.0.0",
+  "author": "Paul Wood",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+    "grunt-release": "^0.7.0",
+    "grunt-bump": "0.0.15",
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-contrib-clean": "^0.6.0"
+  }
+}
