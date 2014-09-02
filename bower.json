@@ -1,5 +1,17 @@
 {
   "name": "poxy-wordpress-core",
-  "version": "0.0.0",
+  "version": "0.0.3",
+  "homepage": "https://github.com/paulwooddesign/poxy-wordpress-core",
+  "authors": [
+    "Paul Wood <paul@poxy.io>"
+  ],
+  "keywords": [
+    "poxy"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
   "dependencies": {}
 }

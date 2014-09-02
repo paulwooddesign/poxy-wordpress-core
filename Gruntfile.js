@@ -8,14 +8,16 @@ module.exports = function(grunt) {
 
     release: {
       options: {
-          bump: false,
+          bump: false, // Using Grunt Bump
+          npm: false, //default: true
           commitMessage: 'Release <%= version %>'
       }
     },
 
     bump: {
       options: {
-            updateConfigs: ['pkg'],
+            files: ['package.json', 'bower.json'],
+            updateConfigs: [],
             commit: false,
             createTag: false,
             push: false
@@ -25,8 +27,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('publish', ['publish:patch']);
-  grunt.registerTask('publish:patch', ['clean', 'bump:patch', 'release']);
-  grunt.registerTask('publish:minor', ['clean', 'bump:minor', 'release']);
-  grunt.registerTask('publish:major', ['clean', 'bump:major', 'release']);
+  grunt.registerTask('publish:patch', ['bump:patch', 'release']);
+  grunt.registerTask('publish:minor', ['bump:minor', 'release']);
+  grunt.registerTask('publish:major', ['bump:major', 'release']);
 
 };
