@@ -775,4 +775,20 @@ function poxy_edit_logo($x="", $y="") {
 
 
 
-?>
+
+////////////////////////////////////////////
+// FOOTER - Load Dev UI
+////////////////////////////////////////////
+add_action('wp_footer','poxy_dev_ui');
+function poxy_dev_ui() {
+    $poxy_dev_styles = of_get_option('poxy_dev_styles');
+    if($poxy_dev_styles == false) {
+        global $user_ID;
+        if( $user_ID ) {
+            if( current_user_can('level_10') ) {
+                get_template_part('bower_components/poxy-wordpress-core/dev');
+            }
+        }
+    }
+}
+
