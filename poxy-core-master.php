@@ -252,6 +252,16 @@ $image_id = get_post_thumbnail_id();
 }
 
 
+function get_single_custom_background() {
+  global $wp_query;
+  global $post;
+  $post_type = get_post_type($post->ID);
+  $is_tiled_bkg = get_post_meta($post->ID, "_poxy_background_tile_value", true);
+  $custom_background_img = MultiPostThumbnails::get_post_thumbnail_url($post_type, "background_image", $post->ID, "poxy_background_image_full");
+  return $custom_background_img;
+}
+
+
 function poxy_banner_image($x = 1900, $y = 600){
 
   if(get_single_custom_background()){
@@ -260,7 +270,7 @@ function poxy_banner_image($x = 1900, $y = 600){
       $image_url = poxy_placeholder($x, $y);
   }
   echo 'style="background-image: url('.$image_url.');"';
-  
+
 }
 
 
