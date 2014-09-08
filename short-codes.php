@@ -1,8 +1,4 @@
 <?php
-
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Shortcodes
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -186,12 +182,12 @@ add_shortcode('one_fourth_last', 'poxy_one_fourth_last');
 
 //one_sixth
 function poxy_one_sixth( $atts, $content = null ) {
-   return '<div class="one_sixth">' . do_shortcode(wpautop($content)) . '</div>';
+   return '<div class="pox a_16a16 b_16b16 c_13c13 d_12d12 e_12e12">' . do_shortcode(wpautop($content)) . '</div>';
 }
 add_shortcode('one_sixth', 'poxy_one_sixth');
 
 function poxy_one_sixth_last( $atts, $content = null ) {
-   return '<div class="one_sixth last">' . do_shortcode(wpautop($content)) . '</div><div class="clearboth"></div>';
+   return '<div class="pox a_16a16 b_16b16 c_13c13 d_12d12 e_12e12 mr0">' . do_shortcode(wpautop($content)) . '</div><div class="clearboth"></div>';
 }
 add_shortcode('one_sixth_last', 'poxy_one_sixth_last');
 
