@@ -252,6 +252,17 @@ $image_id = get_post_thumbnail_id();
 }
 
 
+function poxy_banner_image($x = 1900, $y = 600){
+
+  if(get_single_custom_background()){
+      $image_url = get_single_custom_background();
+  } else {
+      $image_url = poxy_placeholder($x, $y);
+  }
+  echo 'style="background-image: url('.$image_url.');"';
+  
+}
+
 
 function poxy_thumb_900x500($x = 900, $y = 500){
 global $post;
@@ -791,4 +802,3 @@ function poxy_dev_ui() {
         }
     }
 }
-
