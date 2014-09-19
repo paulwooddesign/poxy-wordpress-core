@@ -38,6 +38,15 @@ function poxy_content($limit = 30){
   }
 }
 
+function get_poxy_content($limit = 30){
+  if(get_the_content() == ''){
+    $placholder_text = of_get_option('poxy_placeholder_text');
+    echo limit_words($placholder_text, $limit).'...'.$limit.' x';
+  }else{
+    echo get_the_content();
+  }
+}
+
 function poxy_text($words, $limit = 10){
   if($words == ''){
     $placholder_text = of_get_option('poxy_placeholder_text');
