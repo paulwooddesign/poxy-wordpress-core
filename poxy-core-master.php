@@ -246,11 +246,11 @@ echo $image_url;
 }
 
 
-function poxy_bgi_1x1($x = 400, $y = 400){
+function poxy_bgi_1x1($x = 650, $y = 650){
 global $post;
 $image_id = get_post_thumbnail_id();
     if($image_id){
-        $image_url = wp_get_attachment_image_src($image_id, 'poxy_thumb_600x400', false);
+        $image_url = wp_get_attachment_image_src($image_id, 'poxy_thumb_650x650', false);
         $image_url = $image_url[0];
     } elseif (poxy_catch_first_image()) {
         $image_url = poxy_catch_first_image();
